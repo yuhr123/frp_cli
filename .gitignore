@@ -1,0 +1,4 @@
+.vscode/
+*.egg-info
+frps.ini
+frpc.ini
