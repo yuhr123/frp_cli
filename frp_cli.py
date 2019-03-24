@@ -9,7 +9,7 @@ def cli():
     pass
 
 @cli.command()
-@click.option('-c', '--config', 'config', default='frpc.ini', required=True)
+@click.option('-c', '--config', 'config', default='/etc/frp/frpc.ini', required=True)
 def frpc(config):
     """frp 客户端配置管理"""
     if not os.path.exists(config):
@@ -124,7 +124,7 @@ def frpc(config):
 
 
 @cli.command()
-@click.option('-c', '--config', 'config', default='frps.ini', required=True)
+@click.option('-c', '--config', 'config', default='/etc/frp/frps.ini', required=True)
 def frps(config):
     """frp 服务器配置管理"""
     if not os.path.exists(config):
